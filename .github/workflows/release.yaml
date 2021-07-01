@@ -33,9 +33,9 @@ on:
 #   HYDRO_SERVING_TOKEN - github token with write access to hydro-serving repo
 
 env:
-  HYDRO_SERVING_REPO: Hydrospheredata/hydro-serving
+  HYDRO_SERVING_REPO: ${{ github.repository_owner }}/hydro-serving
   IMAGE: serving-manager # name of the built image
-  REGISTRY: hydrosphere
+  REGISTRY: bulbawarrior
   
 jobs:
   Build_and_publish: # Use for merge release, build and push image and set tag, update helm and compose. Depends on release type
